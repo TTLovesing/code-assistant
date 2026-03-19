@@ -1,0 +1,277 @@
+{
+  "summary": {
+    "pass": true,
+    "failed_checks": []
+  },
+  "sft": {
+    "count": 49108,
+    "metrics": {
+      "prompt_has_def_ratio": 1.0,
+      "prompt_no_fence_ratio": 1.0,
+      "output_no_fence_ratio": 1.0,
+      "output_no_top_level_def_ratio": 1.0,
+      "concat_parse_ok_ratio": 0.9985
+    },
+    "bad_samples": [
+      {
+        "idx": 1626,
+        "prompt_head": "# You are tasked with creating a Python function that trains a random forest regressor model using a given training dataset and evaluates its performance using a separate evaluatio",
+        "output_head": "    mlflow.sklearn.autolog()\n    clf = RandomForestRegressor(max_depth=config.max_depth)\n    clf.fit(train_df_x, np.squeeze(train_df_y.values.T))\n    eval_score = clf.score(eval_df",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 4551,
+        "prompt_head": "# You are working with a temporal graph and need to compute the closeness centralities of nodes in the graph. The closeness centrality of a node is defined as the normalized sum of",
+        "output_head": "    if sum_evo:\n        cent_evo = True\n\n    if not graph.directed:\n        graph = convert_to_directed(graph)\n\n    if intervals:\n        graph = graph.get_temporal_subgraph(interv",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 6430,
+        "prompt_head": "# You are tasked with creating a pytest fixture for an isolated runtime using a temporary directory. The fixture should utilize the `pytest` framework and `pathlib` module in Pytho",
+        "output_head": "    instance = Runtime(project_dir=str(tmp_path), isolated=True)\n    yield instance\n    instance.clean()\n",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 7236,
+        "prompt_head": "# You are tasked with creating a Python module that allows users to manage tag namespaces in Oracle Cloud Infrastructure (OCI). A tag namespace is a container for tag keys and cons",
+        "output_head": "    config = oci.config.from_file(config_file_location, config_profile_name=config_profile_name)\n\n    if auth_type == \"instance_principal\":\n        signer = oci.auth.signers.Instan",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 7744,
+        "prompt_head": "# You are tasked with creating a Python program that calculates the Translation Error Rate (TER) for a given set of predictions and targets. The TER is a metric used in natural lan",
+        "output_head": "    pass\n",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 7920,
+        "prompt_head": "# You are working on a Python application that interacts with the Azure App Platform. You need to implement a function to create a GET request for fetching information about an API",
+        "output_head": "    accept = \"application/json\"\n    \n    # Construct URL\n    _url = f\"/subscriptions/{subscription_id}/resourceGroups/{resource_group_name}/providers/Microsoft.AppPlatform/Spring/{",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 8313,
+        "prompt_head": "# I am trying to create a photo-z distribution for galaxies using Python. I have the redshift distribution for sources and clusters, and I want to use them to create photo-z distri",
+        "output_head": "    return (zp_support_cl, pdf_zp_cl, zp_support_src, pdf_zp_src)\n",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 8721,
+        "prompt_head": "# See the Python code below from the file autoencoder/api.py.\n# Update the given code considering this change: \"Add reduce option to API\"\n# from .io import preprocess\n# from .train",
+        "output_head": "    x = preprocess(count_matrix, kfold=kfold, censor=censor_matrix)\n    model = train(x, hidden_size=hidden_size, learning_rate=learning_rate,\n                  aetype=type, epochs",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 8999,
+        "prompt_head": "# You are working on a project that involves generating object definitions for a simulation. The object definitions include details such as type, material, size, color, shape, and ",
+        "output_head": "    definition_copy = copy.deepcopy(object_definition)\n\n    if choice_material is None and 'chooseMaterial' in definition_copy:\n        choice_material = random.choice(definition_c",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 9136,
+        "prompt_head": "# Update the Python function using google-cloud-storage library to interact with Google Cloud Storage. Now, the function should not only upload, download, list or delete files, but",
+        "output_head": "    storage_client = storage.Client()\n    bucket = storage_client.bucket(bucket_name)\n    \n    if operation == 'upload':\n        blob = bucket.blob(destination_blob_name)\n        b",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 9899,
+        "prompt_head": "# Update the given code considering this change: \"Fix test_runner_work_in_environments_with_no_pip to work under --use-zipapp\"\n# Here are the contents of the file tests/functional/",
+        "output_head": "    runner = pip_src / \"src\" / \"pip\" / \"__pip-runner__.py\"\n\n    # Ensure there's no pip installed in the environment\n    script.pip(\"uninstall\", \"pip\", \"--yes\", use_module=True)\n  ",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 10282,
+        "prompt_head": "# Create a new Python file that addresses: \"Add optional actual asserted values logging\"\ndef pytest_assertion_pass(item: Item,\n    '''\n    Log every assertion, in case we later nee",
+        "output_head": "    print('given', item.name + ':' + str(lineno), str(orig))  # no repr()!)\n    print('actual', item.name + ':' + str(lineno),\n          # Get rid of full-diff, -vv for full diff, ",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 10530,
+        "prompt_head": "# You are tasked with creating a Python function that can handle constrained collections for a given model field. The function should take into account the minimum and maximum numb",
+        "output_head": "    field = ConstrainedSet()\n    field.min_items = min_items\n    field.max_items = max_items\n    field.item_type = item_type\n    model_field = ModelField(name=\"\", class_validators=",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 10568,
+        "prompt_head": "# You are tasked with creating a method to automatically retrieve a graph from a specified repository. The method should be able to handle both directed and undirected graphs, and ",
+        "output_head": "    return AutomaticallyRetrievedGraph(\n        graph_name=graph_name,\n        dataset=repository,\n        directed=directed,\n        verbose=verbose,\n        cache_path=cache_path",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 10979,
+        "prompt_head": "# I need to implement the Subroutine for Competitive Evolution of Simplexes (SCE) algorithm in Python. The SCE algorithm is used to find the smallest value of a criterion in a give",
+        "output_head": "    nps,nopt=s.shape\n    n = nps\n    m = nopt\n    alpha = 1.0\n    beta = 0.5\n",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 12107,
+        "prompt_head": "# You are tasked with creating a Python function to retrieve a routing rule from a CDN profile using the Azure NextGen CDN API.\n# Write a Python function get_route() that takes the",
+        "output_head": "    pulumi.log.warn(\"get_route is deprecated: The 'latest' version is deprecated. Please migrate to the function in the top-level module: 'azure-nextgen:cdn:getRoute'.\")\n    __args",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 12693,
+        "prompt_head": "# You are tasked with creating an API endpoint for event management using FastAPI and SQLAlchemy. You need to create endpoints for retrieving, deleting, creating, updating, and del",
+        "output_head": "    return db.event_notifications.create(session, event_data)\n",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 13296,
+        "prompt_head": "# You are tasked with creating a function that modifies a screenshot format, size, and quality before saving it. The function should take in the following parameters:\n# - reportdir",
+        "output_head": "    extension = 'png'\n    resample_filter = Image.BOX  # for PNG\n\n    # validate format\n    if format not in ['JPEG', 'PNG']:\n        raise ValueError(\"settings screenshots format ",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 13551,
+        "prompt_head": "# Create a Python script snippet that Updates Low Clothing cleanliness: Stain Removal Techniques for Decision Making for Beginners. Use if/else or switch/case statements to conditi",
+        "output_head": "    if random.random() < success_rate:\n        print(f\"{technique}: Success!\")\n        reliabilities[technique] += 1.0\n    else:\n        print(\n            f\"{technique}: Failure! ",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      },
+      {
+        "idx": 14080,
+        "prompt_head": "# Design a function that determines the congruity between a provided encrypted character array, a given regular expression pattern, and an additional lookup hash table. The functio",
+        "output_head": "    decrypted_array = ''.join(\n        [lookup_table[c] if c in lookup_table else c for c in encrypted_character_array]\n    )\n    if(re.search(regex_pattern, decrypted_array)):\n   ",
+        "flags": {
+          "prompt_has_def": true,
+          "prompt_no_fence": true,
+          "output_no_fence": true,
+          "output_no_top_def": true,
+          "concat_parse_ok": false
+        }
+      }
+    ]
+  },
+  "dpo": {
+    "count": 675,
+    "metrics": {
+      "prompt_has_def_ratio": 1.0,
+      "prompt_no_fence_ratio": 1.0,
+      "chosen_no_top_level_def_ratio": 1.0,
+      "rejected_no_top_level_def_ratio": 1.0,
+      "chosen_concat_parse_ok_ratio": 1.0,
+      "rejected_concat_parse_ok_ratio": 1.0
+    },
+    "bad_samples": []
+  },
+  "eval": {
+    "count": 20,
+    "metrics": {
+      "prompt_has_def_ratio": 1.0,
+      "prompt_no_fence_ratio": 1.0
+    }
+  }
+}

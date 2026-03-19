@@ -1,0 +1,23 @@
+﻿# large artifacts
+.hf/
+models/
+training/
+
+# datasets
+data/raw/
+data/processed_v*/
+
+# eval artifacts
+eval/results*/
+eval/*.log
+
+# runtime/log
+*.log
+*.pid
+
+# python
+__pycache__/
+*.pyc
+
+# nested git repo (track separately)
+LLaMA-Factory/

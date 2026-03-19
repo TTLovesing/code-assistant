@@ -1,0 +1,59 @@
+project:
+  name: code-assistant-python-func
+  task: python_function_generation
+  seed: 42
+
+paths:
+  raw_dir: ~/code-assistant/data/raw
+  processed_dir: ~/code-assistant/data/processed
+  sft_out: ~/code-assistant/training/sft_ckpt
+  dpo_out: ~/code-assistant/training/dpo_ckpt
+  eval_out: ~/code-assistant/eval/results
+
+data:
+  sft_dataset: OpenCoder-LLM/opc-sft-stage1
+  dpo_dataset: coseal/CodeUltraFeedback
+  language: python
+  max_prompt_chars: 1200
+  max_response_chars: 3000
+  dedup: true
+  keep_function_only: true
+
+sampling:
+  sft_max_samples: 50000
+  dpo_max_pairs: 10000
+
+training:
+  base_model: Qwen/Qwen2.5-Coder-3B-Instruct
+  bf16: true
+  gradient_checkpointing: true
+
+sft:
+  lora_r: 64
+  lora_alpha: 128
+  lora_dropout: 0.05
+  learning_rate: 2e-4
+  num_train_epochs: 2
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 16
+  max_seq_length: 2048
+  logging_steps: 20
+  save_steps: 500
+
+dpo:
+  beta: 0.1
+  learning_rate: 5e-6
+  num_train_epochs: 1
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 16
+  max_length: 2048
+  max_prompt_length: 1024
+  logging_steps: 20
+  save_steps: 500
+
+eval:
+  metrics:
+    - pass@1
+    - pass@k
+    - unit_test_pass_rate
+    - preference_win_rate

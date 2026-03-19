@@ -1,0 +1,25 @@
+{
+  "seed_pairs": 670,
+  "sft_rows": 10813,
+  "built_from_sft": 9330,
+  "skip_empty": 0,
+  "skip_dirty_chosen": 66,
+  "skip_no_mutation": 1299,
+  "skip_parse_fail": 118,
+  "skip_duplicate": 0,
+  "final_pairs": 10000,
+  "target_pairs": 10000,
+  "mutation_tags": {
+    "bool_or_to_and": 498,
+    "return_add_minus": 6153,
+    "true_to_false": 838,
+    "false_to_true": 86,
+    "bool_and_to_or": 1604,
+    "return_drop_minus": 111,
+    "cmp_eq_to_ne": 26,
+    "cmp_ge_to_gt": 6,
+    "cmp_le_to_lt": 5,
+    "cmp_ne_to_eq": 3
+  },
+  "gate_ready": true
+}

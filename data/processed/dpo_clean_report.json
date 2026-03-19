@@ -1,0 +1,14 @@
+{
+  "total": 10000,
+  "drop_empty": 0,
+  "drop_no_pair": 59,
+  "drop_small_gap": 0,
+  "drop_too_long": 2742,
+  "drop_garbled": 0,
+  "drop_not_python": 3200,
+  "drop_no_function": 2446,
+  "drop_low_info": 63,
+  "drop_dup_pair": 0,
+  "drop_dup_prompt": 0,
+  "kept": 1490
+}

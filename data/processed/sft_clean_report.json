@@ -1,0 +1,12 @@
+{
+  "total": 212071,
+  "drop_empty": 0,
+  "drop_too_long": 32815,
+  "drop_garbled": 8,
+  "drop_not_python": 45334,
+  "drop_no_function": 71564,
+  "drop_dup_pair": 7660,
+  "drop_dup_instruction": 137,
+  "drop_dup_output": 4553,
+  "kept": 50000
+}

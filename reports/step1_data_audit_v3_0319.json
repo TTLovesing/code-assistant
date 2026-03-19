@@ -1,0 +1,35 @@
+{
+  "step": "step1_data_audit",
+  "sft": {
+    "file": "/root/code-assistant/data/processed_v2/sft_train_func_completion.jsonl",
+    "total": 49108,
+    "empty_output": 0,
+    "empty_output_rate": 0.0,
+    "fim_rate": 0.0,
+    "replacement_char_rate": 0.0,
+    "top_level_continuation_rate": 0.0,
+    "high_non_ascii_rate": 0.004,
+    "body_like_rate": 0.9998,
+    "parse_ok_rate": 0.9985
+  },
+  "dpo": {
+    "file": "/root/code-assistant/data/processed_v3/dpo_train_func_completion.jsonl",
+    "total": 10000,
+    "chosen_empty_rate": 0.0,
+    "rejected_empty_rate": 0.0,
+    "chosen_polluted_rate": 0.0,
+    "rejected_polluted_rate": 0.0,
+    "chosen_parse_ok_rate": 1.0,
+    "rejected_parse_ok_rate": 1.0,
+    "usable_pairs": 10000,
+    "usable_rate": 1.0,
+    "gate_threshold_pairs": 9821,
+    "gate_pass": true,
+    "gate_shortfall_pairs": 0,
+    "gate_rule": "max(3000, int(SFT_total * 0.2))"
+  },
+  "decision": {
+    "allow_enter_dpo_training": true,
+    "reason": "pass dpo quantity+quality gate"
+  }
+}

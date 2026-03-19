@@ -1,0 +1,21 @@
+{
+  "sft": {
+    "total": 50000,
+    "drop_no_function": 29,
+    "drop_empty": 0,
+    "drop_top_level_def_completion": 863,
+    "kept": 49108
+  },
+  "dpo": {
+    "total": 1490,
+    "drop_empty": 0,
+    "drop_no_function": 7,
+    "drop_name_mismatch": 788,
+    "drop_top_level_def_completion": 20,
+    "kept": 675
+  },
+  "outputs": {
+    "sft_out": "/root/code-assistant/data/processed_v2/sft_train_func_completion.jsonl",
+    "dpo_out": "/root/code-assistant/data/processed_v2/dpo_train_func_completion.jsonl"
+  }
+}
